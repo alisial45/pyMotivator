@@ -1,11 +1,8 @@
 from twilio.rest import Client
-import os
+from config import account_sid,auth_token,phone_no
+
 
 def send_message_to_client(message):
-
- account_sid =os.environ['TWILIO_ACCOUNT_ID']
- auth_token = os.environ['TWILIO_ACCESS_TOKEN']
- phone_no = os.environ['PHONE_NO']
 
  client = Client(account_sid, auth_token)
  message = client.messages.create(
@@ -13,6 +10,5 @@ def send_message_to_client(message):
             body=message,
             to='whatsapp:{}'.format(phone_no)
               )
-
-
+ return  message
 

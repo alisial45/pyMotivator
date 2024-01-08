@@ -1,5 +1,4 @@
 import requests
-import os
 from twilio_conn import send_message_to_client
 
 def quote_of_the_day(category):
@@ -18,7 +17,8 @@ def quote_of_the_day(category):
 
      
 quote=quote_of_the_day(category='happiness')
-send_message_to_client(quote)
+message = send_message_to_client(quote)
+print (message.sid)
 
 
 
