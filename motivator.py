@@ -17,8 +17,8 @@ def quote_of_the_day(category):
 
      
 quote=quote_of_the_day(category='happiness')
-message = send_message_to_whatsapp(quote)
-print (message.sid)
+#send_message_to_whatsapp(quote)
+
 
 
 
