@@ -1,5 +1,5 @@
 import requests
-from twilio_conn import send_message_to_whatsapp
+#from twilio_conn import send_message_to_whatsapp
 
 def quote_of_the_day(category):
             
@@ -18,7 +18,6 @@ def quote_of_the_day(category):
      
 quote=quote_of_the_day(category='happiness')
 #send_message_to_whatsapp(quote)
-
 
 
 
